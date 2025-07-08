@@ -133,14 +133,14 @@ class Database:
 
 if __name__ == '__main__':
     # DB 객체 생성 및 연결
-    db = Database(host='211.169.249.211', user='dbuser', passwd='dbuser', db='lg_autotest')
+    db = Database(host='103.55.191.194', user='dbuser', passwd='dbuser', db='lg_autotest')
     db.connect_db()
 
     table_name = 'elias'
 
-    ################################################################
-    # Create Table
-    ################################################################
+    # ################################################################
+    # # Create Table
+    # ################################################################
     # sql = f'create table if not exists {table_name} (' \
     #       f'id int(11) not null auto_increment, ' \
     #       f'reg_datetime datetime default current_timestamp(), ' \
@@ -149,47 +149,49 @@ if __name__ == '__main__':
     #       f'key id (id)) ' \
     #       f'engine=innodb default charset=utf8mb4 collate=utf8mb4_general_ci;'
     # db.execute_and_commit(sql)
-
-    ################################################################
-    # Insert Data
-    ################################################################
-    name = "Elias Kim"
-    age = 20
-    # Way I
+    #
+    # ################################################################
+    # # Insert Data
+    # ################################################################
+    # name = "Elias Kim"
+    # age = 20
+    #
+    # # Way I
     # sql = f'insert into {table_name} (name, age) values ("{name}", {age});'
+    # # sql = f"insert into {table_name} (name, age) values ('{name}', {age});"
     # db.execute_and_commit(sql)
-
-    # Way II
+    #
+    # # Way II
     # sql = f'insert into {table_name} (name, age) values (%s, %s);'
     # values = (name, age)
     # db.execute_and_commit(sql, values)
-
+    #
     # for i in range(100):
     #     sql = f'insert into {table_name} (name, age) values(%s, %s);'
     #     values = (f'{table_name}_{i+1}', (20 + i)) # elias_1, 20, elias_2, 21, ...
     #     # db.execute_and_commit(sql, values)
     #     db.execute_only(sql, values)
     # db.commit_only()
-
-    ################################################################
-    # Get Data List from Table
-    ################################################################
+    #
+    # ################################################################
+    # # Get Data List from Table
+    # ################################################################
     # sql = f'select * from {table_name};'
     # data_list = db.execute_and_return(sql)
     # for data in data_list:
     #     ic(data)
-
-    ################################################################
-    # Get One Data from Table
-    ################################################################
+    #
+    # ################################################################
+    # # Get One Data from Table
+    # ################################################################
     # sql = f'select count(*) as cnt from {table_name};'
     # data = db.execute_and_return_one(sql)
     # ic(data)
     # ic(data['cnt'])
 
-    ################################################################
-    # Update Data
-    ################################################################
+    # ################################################################
+    # # Update Data
+    # ################################################################
     # id = 2
     # new_name = 'Hong Gil Dong'
     # new_age = 30
@@ -201,9 +203,9 @@ if __name__ == '__main__':
     ################################################################
     # Delete Data
     ################################################################
-    # id = 2
-    # sql = f'delete from {table_name} where id = {id};'
-    # db.execute_and_commit(sql)
+    id = 2
+    sql = f'delete from {table_name} where id = {id};'
+    db.execute_and_commit(sql)
 
     ################################################################
     # Disconnect DB
