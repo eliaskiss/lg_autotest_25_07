@@ -78,7 +78,7 @@ def put_data_to_db(excel_file_name):
         sql = (f'insert into {table_name} (station_number, station_name, region, address, latitude, longitude, '
                f'install_date, lcd_count, qr_count, proc_type) values(%s, %s, %s, %s, %s, %s, %s, %s, %s, %s);')
         values = [elem.value for elem in row]
-        # ic(values)
+        ic(values)
         db.execute_only(sql, values)
     db.commit_only()
 
@@ -219,5 +219,5 @@ def get_data_from_db(from_date, region, output_file_name):
     wb.save(output_file_name)
 
 if __name__ == '__main__':
-    put_data_to_db('public_bicycle.xlsx')
+    # put_data_to_db('public_bicycle.xlsx')
     get_data_from_db('2020-01-01', '서초구', 'new_excel.xlsx')
