@@ -42,7 +42,7 @@ RETURN_CODE = b'\x0d'
 
 def main():
     ser = Serial()
-    ser.openSerial('com2')
+    ser.openPort('com2')
     is_power_on = False
 
     ic('Program is running...')
