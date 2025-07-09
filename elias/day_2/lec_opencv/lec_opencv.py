@@ -231,9 +231,10 @@ if __name__ == '__main__':
     ################################################################
     # Record Video Stream
     ################################################################
-    # file_name = f'{datetime.now().strftime("%Y_%m_%d_%H_%M_%S")}'
-    # cam.record_video(file_name, 10)
-    # cam.record_video(file_name, width=2048, height=1280)
+    file_name = f'{datetime.now().strftime("%Y_%m_%d_%H_%M_%S")}'
+    cam.record_video(file_name, 11)
+    # cam.record_video(file_name)
+    # cam.record_video(file_name, fps=11, width=2048, height=1280)
 
     ################################################################
     # Play Video Stream
