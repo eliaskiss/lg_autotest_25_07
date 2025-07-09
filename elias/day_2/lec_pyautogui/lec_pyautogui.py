@@ -177,10 +177,10 @@ if __name__ == '__main__':
 
     # # Get Screen Size
     # ic(ag.getScreenSize())
-
+    #
     # # Get Current Mouse Position
     # ic(ag.getMousePosition())
-
+    #
     # # Check Position Validation
     # ic(ag.isValidPosition(100, 100))
     # ic(ag.isValidPosition(2000, 2000))
@@ -189,7 +189,7 @@ if __name__ == '__main__':
     # ic(ag.isValidPosition(1919, 1079))
     # ic(ag.isValidPosition(1920, 1080))
 
-    # # Set Pause Time for each call function
+    # Set Pause Time for each call function
     # default = ag.getPauseTime()
     # ic('Default Pause Time:', default)
     # ag.setPauseTime(1)
@@ -210,13 +210,13 @@ if __name__ == '__main__':
     # ag.mouseMove(100, 100, 3, relative=True) # 현재 마우스 커서 위치 기준으로 (100, 100) 3초 동안 이동
     # ag.mouseMove(-100, -100, 3, relative=True) # 현재 마우스 커서 위치 기준으로 반대방향(100, 100) 3초 동안 이동
 
-    # # Mouse Drag
+    # Mouse Drag
     # ic(ag.getMousePosition())
     # ag.mouseMove(488, 104)  # (380, 310)으로 이동
     # ag.mouseDrag(500, 500, 3)   # (380, 310) -> (500, 500) 까지 3초동안 드래그
     # ag.mouseDrag(500, 500, 3, True) # (380, 310) -> (880, 810) 까지 3초 동안 드래그 [(500, 500) 만큼 드래그]
 
-    # # Mouse Click
+    # Mouse Click
     # position = ag.getMousePosition()
     # ag.mouseClick(position.x, position.y, logScreenshot=True)
 
