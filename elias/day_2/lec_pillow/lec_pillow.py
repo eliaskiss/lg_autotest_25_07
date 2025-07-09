@@ -276,8 +276,8 @@ if __name__ == '__main__':
     ###############################################################
     # 이미지 회전
     ###############################################################
-    # new_image = pillow.rotate_image(img_file_path, 90, True)
-    new_image = pillow.rotate_image(img_file_path, 90, False)
+    new_image = pillow.rotate_image(img_file_path, 90, True)
+    # new_image = pillow.rotate_image(img_file_path, 90, False)
 
     ##################################################
     # 이미지 변형
