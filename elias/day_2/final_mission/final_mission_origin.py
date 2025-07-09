@@ -99,7 +99,7 @@ class MainDialog(QDialog):
         try:
             serial_port = self.main_ui.cb_serial_port.currentText()
             self.ser = Serial()
-            self.ser.openSerial(serial_port)
+            self.ser.openPort(serial_port)
             QMessageBox.information(self, 'Information', f'{serial_port} is opened.', QMessageBox.Ok)
             self.main_ui.gb_serial.setEnabled(True)
             self.main_ui.btn_open_serial.setEnabled(False)
