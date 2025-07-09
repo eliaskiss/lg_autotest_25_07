@@ -44,11 +44,20 @@ st.divider()
 st.header('Text Input')
 st.text_input("입력창", value=st.session_state['input_value'])
 col3, col4 = st.columns(2)
-if col3.button("문자 입력값 가져오기", use_container_width=True):
-    st.write(st.session_state['input_value'])
-if col4.button("문자 입력값 설정하기", use_container_width=True):
-    st.session_state['input_value'] = 'Fine, Thank you and you?'
-    st.rerun()
+with col3:
+    if st.button("문자 입력값 가져오기", use_container_width=True):
+        st.write(st.session_state['input_value'])
+with col4:
+    if st.button("문자 입력값 설정하기", use_container_width=True):
+        st.session_state['input_value'] = 'Fine, Thank you and you?'
+        st.rerun()
+
+# if col3.button("문자 입력값 가져오기", use_container_width=True):
+#     st.write(st.session_state['input_value'])
+# if col4.button("문자 입력값 설정하기", use_container_width=True):
+#     st.session_state['input_value'] = 'Fine, Thank you and you?'
+#     st.rerun()
+
 st.divider()
 
 st.header('Number Input')
