@@ -1,3 +1,4 @@
+# pip install pillow
 from PIL import Image
 from PIL import ImageDraw
 from PIL import ImageFont
@@ -221,27 +222,6 @@ class Pillow:
         path = os.path.join(dir, 'merge_' + file_name)
         merge_image.save(path)  # images/merge_buz.jpg
         return path
-
-
-    ##################################################
-    # Convert Image Format
-    ##################################################
-    def convert_format(self, img_file_path, format):
-        img = Image.open(img_file_path)
-
-        # 이미지 모드가 RGB가 아닌경우에는 포맷변경 불가
-        # RGB모드로 변경해야함
-        if img.mode != 'RGB':
-            img = img.convert('RGB')
-            
-        
-
-
-
-
-
-
-
 
 
 if __name__ == '__main__':
