@@ -180,8 +180,8 @@ class MySSH:
     ################################################################
     def getFromHostWithSCP(self, srcFilePath, dstFilePath):
         if self.scp_client is None:
-            self.scp_cleint = SCPClient(self.client.get_transport())
-        self.scp_cleint.get(srcFilePath, dstFilePath)
+            self.scp_client = SCPClient(self.client.get_transport())
+        self.scp_client.get(srcFilePath, dstFilePath)
 
     ###############################################################
     # Put file to host with SCP
