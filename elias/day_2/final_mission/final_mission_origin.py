@@ -26,7 +26,7 @@ from openpyxl.styles.fonts import Font
 from openpyxl.styles.borders import Border, Side
 
 # Our modules
-sys.path.append('../../day_3/lec_pymysql')
+sys.path.append('../../day_1/lec_pymysql')
 sys.path.append('../../day_1/lec_pyserial')
 
 from lec_pymysql import Database
