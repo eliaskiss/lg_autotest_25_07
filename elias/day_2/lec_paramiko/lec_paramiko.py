@@ -213,7 +213,7 @@ class MySSH:
 
 if __name__ == '__main__':
     ssh = MySSH()
-    if ssh.connect('211.169.249.211', 'elias', '1111', timeout=5, port=22):
+    if ssh.connect('103.55.191.194', 'elias', '1111', timeout=5, port=22):
         ic('SSH is connected')
 
         # ###########################################################
